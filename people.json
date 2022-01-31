@@ -1,0 +1,20 @@
+[
+  {
+    "name": "fabian",
+    "age": 27,
+    "gender": "M",
+    "hobbies": ["coding", "tennis", "netflix"],
+    "address": "the vyne residence",
+    "relationship": "single",
+    "occupation": "software engineer"
+  },
+  {
+    "name": "brad",
+    "age": 50,
+    "gender": "M",
+    "hobbies": ["acting", "drinking", "pranks"],
+    "address": "hollywood avenue",
+    "relationship": "divorced",
+    "occupation": "actor"
+  }
+]
