@@ -14,23 +14,7 @@ type person struct {
 	Address string
 }
 
-// 	person1 := person{
-// 		Name: "fabian",
-// 		Age: 27,
-// 		Gender: "M",
-// 		Hobbies: []string{"coding","tennis","netflix"},
-// 		Address: "the vyne residence",
-// 	}
 
-// 	person2 := person{
-// 		Name: "brad",
-// 		Age: 50,
-// 		Gender: "M",
-// 		Hobbies: []string{"acting","drinking","pranks"},
-// 		Address: "hollywood avenue",
-// 	}
-
-// 	return []person{ person1, person2 }
 
 func getPersons()(persons []person) {
 	fileBytes, err := ioutil.ReadFile("./people.json")
@@ -39,14 +23,22 @@ func getPersons()(persons []person) {
 		panic(err)
 	}
 
-	fileContent := string(fileBytes)
-	fmt.Println(fileContent)
+	fileContent := string(fileBytes) // have to convert the json file to string first
+	fmt.Println("fileContent: ", fileContent)
 
 	err  = json.Unmarshal(fileBytes, &persons)
 
 	if err != nil {
 		panic(err)
 	}
-
-	return persons
+	fmt.Println("print persons: ", persons) 
+	return persons // returns json in array
 }
+
+	// personss := getPersons()
+
+	// for i, _ := range persons {
+	// 	persons[i].Name = persons[i].Name + "\n this is name"
+	// }
+
+	// fmt.Println(persons)
