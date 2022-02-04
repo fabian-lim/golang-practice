@@ -52,7 +52,7 @@ func main(){
 			panic(err2)
 		}
 		fmt.Println("\ndata: ", data) //converting the sTo to byte array and printing it
-		fmt.Printf("\nTransport: ", data["Transport"]) //converting the sTo to byte array and printing it
+		fmt.Printf("\nTransport: ", data["Transport"])
 		
 		transport, ok := data["Transport"].(map[string]interface{})
 
